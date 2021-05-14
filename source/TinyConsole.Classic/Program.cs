@@ -10,6 +10,7 @@ namespace TinyConsole.Classic
 	{
 		static void Main(string[] args)
 		{
+			
 		}
 	}
 }
