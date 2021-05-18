@@ -5,38 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-	<ItemGroup>
-		<!-- The highest stable version-->
-		<!--<PackageReference Include="AutoMapper" Version="*" />-->
-
-		<!-- The highest stable version that matches the pattern -->
-		<!--<PackageReference Include="AutoMapper" Version="6.2.*" />-->
-
-		<!-- The highest stable or prerelease version that matches the pattern -->
-		<!--<PackageReference Include="AutoMapper" Version="7.0-*" />-->
-
-		<!-- Specify a range, resolves to the smallest number -->
-		<!--<PackageReference Include="AutoMapper" Version="[8.1,10.0]" />-->
-
-	</ItemGroup>
 </Project>
-
-
-<!--
-List of most recent versions of AutoMapper
-10.1.1	
-10.0.0	
-9.0.0	
-8.1.1	
-8.1.0	
-8.0.0	
-7.0.1	
-7.0.0
-7.0.0-alpha-0001	
-6.2.2	
-6.2.1	
-6.2.0	
-6.1.1	
-6.1.0	
-6.0.2
--->
