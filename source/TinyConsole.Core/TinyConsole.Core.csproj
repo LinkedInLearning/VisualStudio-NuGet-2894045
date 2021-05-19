@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Automapper" Version="10.1.1" />
+    <PackageReference Include="Automapper" Version="9.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
 
