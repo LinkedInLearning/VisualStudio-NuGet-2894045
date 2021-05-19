@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Automapper" Version="10.1.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
 </Project>
