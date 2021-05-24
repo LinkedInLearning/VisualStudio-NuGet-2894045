@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,7 +6,7 @@
     <Version>0.7.0-experimental</Version>
     <Company>Big Star Collectibles</Company>
     <PackageId>BigStarCollectibles.ColorLib</PackageId>
-    <Authors>Walt Ritscher</Authors>
+    <Authors>Walt Ritscher, Terry Dactill</Authors>
     <Product>ColorLib</Product>
     <Copyright>Copyright info here (optional)</Copyright>
     <Description>Internal library for Big Star Collectibles teams. Work with HTML standard colors.  Includes a random color selector, a substitute color finder and a color family tree.</Description>
