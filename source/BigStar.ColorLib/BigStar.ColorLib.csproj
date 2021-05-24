@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.7.0</Version>
+    <Company>BigStar Collectibles</Company>
+    <PackageId>BigStarCollectibles.ColorLib</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer" Version="2.10.1" />
+  </ItemGroup>
+
+</Project>

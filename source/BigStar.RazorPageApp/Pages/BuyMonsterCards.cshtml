@@ -1,0 +1,76 @@
+﻿@page
+@model BigStarWebApp.Pages.BuyMonstersModel
+@{
+	ViewData["Title"] = "Buy Monster Cards";
+}
+<h4>The Monster Cards</h4>
+<div class="card-deck">
+	<div class="card mb-4" style="background: #d8d2e1">
+		<h6 class="card-header">Story</h6>
+		<p class="card-body">
+			Lorem Ipsum clita ut id accusam nulla ipsum voluptua ea nonummy wisi. Duo eum sadipscing sit lobortis elitr diam et tempor voluptua consetetur diam justo lorem assum labore iriure.  
+		</p>
+	</div>
+	<div class="card mb-4" style="background: #d8d2e1">
+		<h6 class="card-header">Trivia</h6>
+		<div class="card-body">
+			<p>This card collection was the first series in the <em>Monrobalan</em> character universe. A favorite choice for collectors that prefer whimsical art, this deck was published in 2017.</p>
+
+		</div>
+	</div>
+	<div class="card mb-4" style="background: #d8d2e1">
+		<div>
+			<h6 class="card-header">Publisher info</h6>
+			<div class="card-body"><strong>Binaryville Cards</strong> was launched in 2015 by veterans of the trading card publishing business. Currently they have two card series in the American top 20 charts.</div>
+		</div>
+	</div>
+</div>
+
+@*<p>
+<p><strong>Binaryville Cards</strong> was launched in 2015 by veterans of the trading card publishing business. Currently they have two card series in the American top 20 charts.</p>*@
+
+	<div class="card-deck">
+		@for (int i = 0; i < Model.MonsterCards.Count; i++)
+		{
+			var modCheck = i + 1;
+			var card = Model.MonsterCards.ElementAt(i);
+		<div class="card mb-4">
+			<img class="card-img-top" style="width:100%;height:15vw;object-fit:contain" src="@Url.Content("~/Images/" + card.ImageUri)" alt="Card image">
+			<div class="card-body">
+				<h4 class="card-title" style="height:3vw">@card.Name</h4>
+				<div class="card-subtitle font-weight-bold alert-primary">@card.Slogan</div>
+				<div class="card-text px-2 ">@card.ShortDescription</div>
+
+				<div class="badge badge-pill badge-light">Rank: @card.PopularityIndex</div>
+				@if (card.PopularityIndex > 700)
+				{
+					<div class="badge badge-pill badge-warning">Rising Star</div>
+				}
+
+				@if (card.PopularityIndex < 450)
+				{
+					<div class="badge badge-pill badge-success">Sale!</div>
+				}
+
+			</div>
+			<div class="card-footer">
+				<a class="btn btn-primary" asp-page="Detail"
+					 asp-route-id='@card.Id'>Buy card</a>
+
+			</div>
+		</div>
+			if (modCheck % 2 == 0)
+			{
+				<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+			}
+			if (modCheck % 3 == 0)
+			{
+				<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>
+				<div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 4 on lg--></div>
+				<div class="w-100 d-none d-xl-block"><!-- wrap every 5 on xl--></div>
+			}
+			
+		}
+
+
+	</div>

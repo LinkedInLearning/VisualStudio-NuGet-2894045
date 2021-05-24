@@ -1,0 +1,110 @@
+﻿@page "{id:int?}"
+@model BigStarWebApp.DetailModel
+@{
+	ViewData["Title"] = "Detail";
+}
+
+<h2>Buy this card</h2>
+
+We have this rare card in stock. Get yours today!
+
+<div class="card-group">
+	<div class="card  ">
+		<div class=" card-header">
+
+			<h4 class="card-title text-secondary">@Model.CurrentCard.Name</h4>
+		</div>
+		<img class="card-img-top" style="width:80%;object-fit:cover" src="@Url.Content("~/Images/" + Model.CurrentCard.ImageUri)" alt="Card image">
+
+		<div class="card-body">
+			<div class="card-text px-2 ">@Model.CurrentCard.Description</div>
+		</div>
+		<div class="card-footer">
+			<div>
+				<p>@Model.CurrentCard.Slogan</p>
+			</div>
+		</div>
+	</div>
+	<div class="card ">
+		<div class="card-header">
+			<h4 class="card-title text-secondary">Characteristics</h4>
+		</div>
+
+		<div class="card-body">
+
+			<table class="table">
+				<tr>
+					<td>
+						Team:
+					</td>
+					<td>@Model.CurrentCard.TeamName</td>
+				</tr>
+				<tr>
+					<td>Eye Count: </td>
+					<td>@Model.CurrentCard.EyeCount</td>
+				</tr>
+
+				@foreach (var detail in Model.CurrentCard.Details)
+				{
+					<tr>
+						<td>
+							@detail.Key:
+						</td>
+						<td>
+							@detail.Value
+						</td>
+					</tr>
+				}
+			</table>
+
+
+		</div>
+		<div class="card-footer">
+			<p>Rank: @Model.CurrentCard.PopularityIndex </p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<h4 class="card-title text-secondary">Pricing</h4>
+		</div>
+
+		<div class="card-body">
+			<table class="table">
+				<tr>
+					<td>Catalog Price: </td>
+					<td>@Model.CurrentCard.CatalogPrice.ToString("C")</td>
+				</tr>
+				<tr>
+					<td>Bid Price: </td>
+
+					<td>
+						@Model.CurrentCard.BidPrice.ToString("C")
+
+						<br />
+
+
+					</td>
+					<td>
+				</tr>
+				<tr>
+					<td>Your Price: </td>
+
+					<td>
+						@(Model.CurrentCard.SalePrice.ToString("C"))
+
+						@if (Model.CurrentCard.IsDiscounted)
+						{
+							<div class="badge badge-pill badge-success">Sale!</div>
+						}
+					</td>
+				</tr>
+			</table>
+
+
+		</div>
+		<div class="card-footer">
+			<p>Prices are updated hourly.</p>
+		</div>
+	</div>
+</div>

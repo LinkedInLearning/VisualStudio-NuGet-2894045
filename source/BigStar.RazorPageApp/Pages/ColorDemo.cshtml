@@ -1,0 +1,51 @@
+﻿@page
+@model BigStar.RazorPageApp.Pages.ColorDemoModel
+@{
+	var cs = new ColorLib.ColorManager();
+	var randomColor = cs.GetRandomColor();
+	var relatedColor = cs.GetSubstituteColor(randomColor);
+}
+
+<h4>Color Demo</h4>
+
+<div class="card-deck h-100">
+	<div class="card mb-3">
+		<h6 class="card-header">Random color and related color</h6>
+		<p class="card-body">
+		
+			Refresh the page to get a new randomized color and a related color from the same color family.
+
+		</p>
+		
+	</div>
+	<div class="card mb-3">
+		<h6 class="card-header">Original Color</h6>
+		<div class="card-body" style="background-color:  @("#" + randomColor.HexValue)">
+			<p style="color:@("#" + randomColor.FontColorHex)">@randomColor.ColorName </p>
+					</div>
+
+	</div>
+	<div class="card mb-3">
+		<h6 class="card-header">Related Color</h6>
+		<div class="card-body" style="background-color:  @("#" + relatedColor.HexValue)">
+			<p style="color:@("#" + relatedColor.FontColorHex)">@relatedColor.ColorName </p>
+		
+		</div>
+
+
+	</div>
+
+	<div class="card mb-3">
+		<h6 class="card-header">Color Family : @randomColor.ColorFamily</h6>
+		<div class="card-body" >
+			<ul>
+				@foreach (ColorLib.WebColor matchingColor in cs.GetMatchingColorFamily(randomColor))
+				{
+					<li>@matchingColor.ColorName</li>
+				}
+			</ul>
+		</div>
+
+
+	</div>
+</div>
