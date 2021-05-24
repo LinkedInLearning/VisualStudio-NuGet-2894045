@@ -18,16 +18,11 @@ namespace BigStar.ColorLib
 		}
 		public List<WebColor> AllColors  { get { return _allColors; } }
 		
-		private WebColor GetRandomizedColor()
-		{
-
-			return _allColors.ElementAt(_ran.Next(_allColors.Count));
-		}
 
 		public WebColor GetRandomColor()
 		{
 
-			return GetRandomizedColor();
+			return _allColors.ElementAt(_ran.Next(_allColors.Count));
 		}
 		public List<WebColor> GetMatchingColorFamily(WebColor candidate)
 		{
