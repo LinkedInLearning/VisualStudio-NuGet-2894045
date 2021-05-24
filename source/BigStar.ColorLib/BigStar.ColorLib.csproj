@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.7.0-experimental</Version>
     <Company>Big Star Collectibles</Company>
     <PackageId>BigStarCollectibles.ColorLib</PackageId>
