@@ -8,44 +8,131 @@
 
 <h4>Color Demo</h4>
 
-<div class="card-deck h-100">
-	<div class="card mb-3">
+<div class="card-deck ">
+	<div class="card mb-4">
+		<h6 class="card-header">Original Color</h6>
+		<div class="card-body" style="background-color:  @(randomColor.HexValue)">
+			<p style="color:@(randomColor.FontHexValue)">@randomColor.ColorName </p>
+
+		</div>
+
+	</div>
+	<div class="card mb-4">
+		<h6 class="card-header">Related Color</h6>
+		<div class="card-body" style="background-color:  @(relatedColor.HexValue)">
+			<p style="color:@(relatedColor.FontHexValue)">@relatedColor.ColorName </p>
+
+		</div>
+	</div>
+</div>
+<div class="card-deck ">
+	<div class="card mb-2">
 		<h6 class="card-header">Random color and related color</h6>
 		<p class="card-body">
-		
+
 			Refresh the page to get a new randomized color and a related color from the same color family.
 
 		</p>
-		
-	</div>
-	<div class="card mb-3">
-		<h6 class="card-header">Original Color</h6>
-		<div class="card-body" style="background-color:  @("#" + randomColor.HexValue)">
-			<p style="color:@("#" + randomColor.FontColorHex)">@randomColor.ColorName </p>
-					</div>
-
-	</div>
-	<div class="card mb-3">
-		<h6 class="card-header">Related Color</h6>
-		<div class="card-body" style="background-color:  @("#" + relatedColor.HexValue)">
-			<p style="color:@("#" + relatedColor.FontColorHex)">@relatedColor.ColorName </p>
-		
-		</div>
-
 
 	</div>
 
-	<div class="card mb-3">
+	<div class="card mb-2">
 		<h6 class="card-header">Color Family : @randomColor.ColorFamily</h6>
-		<div class="card-body" >
+		<div class="card-body">
+			
 			<ul>
 				@foreach (ColorLib.WebColor matchingColor in cs.GetMatchingColorFamily(randomColor))
 				{
-					<li>@matchingColor.ColorName</li>
+				<li>@matchingColor.ColorName</li>
 				}
 			</ul>
 		</div>
+	</div>
 
+	<div class="card mb-2">
+		<h6 class="card-header">WebColor properties </h6>
+		<div class="card-body">
+			<table class="table table-sm">
+				<thead class="thead-light">
+					
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">ColorName</th>
+						<td>@randomColor.ColorName</td>
 
+					</tr>
+					<tr>
+						<th scope="row">HumanizedName</th>
+						<td>@randomColor.HumanizedColorName</td>
+
+					</tr>
+					<tr>
+						<th scope="row">ColorFamily</th>
+						<td>@randomColor.ColorFamily</td>
+
+					</tr>
+					<tr>
+						<th scope="row">HexValue</th>
+						<td>@randomColor.HexValue</td>
+
+					</tr>
+					<tr>
+						<th scope="row">FontHexValue</th>
+						<td>@randomColor.FontHexValue</td>
+
+					</tr>
+					<tr>
+						<th scope="row">RedValue</th>
+						<td>@randomColor.RedValue</td>
+
+					</tr>
+					@*<tr>
+						<th scope="row">RedPercent</th>
+						<td>@randomColor.RedPercent</td>
+
+					</tr>*@
+					<tr>
+						<th scope="row">GreenValue</th>
+						<td>@randomColor.GreenValue</td>
+
+					</tr>
+					@*<tr>
+						<th scope="row">GreenPercent</th>
+						<td>@randomColor.GreenPercent</td>
+
+					</tr>*@
+					<tr>
+						<th scope="row">BlueValue</th>
+						<td>@randomColor.BlueValue</td>
+
+					</tr>
+					@*<tr>
+						<th scope="row">BluePercent</th>
+						<td>@randomColor.BluePercent</td>
+
+					</tr>*@
+
+					@*<tr>
+						<th scope="row">Hue</th>
+						<td>@randomColor.HSL.Hue</td>
+
+					</tr>
+					<tr>
+						<th scope="row">Saturation</th>
+						<td>@randomColor.HSL.Saturation</td>
+
+					</tr>
+					<tr>
+						<th scope="row">Lightness</th>
+						<td>@randomColor.HSL.Lightness</td>
+
+					</tr>*@
+
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
+
+

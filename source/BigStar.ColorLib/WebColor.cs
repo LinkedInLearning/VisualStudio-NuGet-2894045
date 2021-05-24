@@ -38,7 +38,7 @@ namespace BigStar.ColorLib
 		}
 		public HSL HSL { get; set; }
 		public ColorFamily ColorFamily { get; set; }
-		public string FontColorHex { get; set; } = "000000";
+		public string FontHexValue { get; set; } = "#000000";
 	}
 	public struct HSL
 	{

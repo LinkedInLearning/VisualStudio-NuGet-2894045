@@ -8,14 +8,9 @@ using System.Threading.Tasks;
 
 namespace BigStar.RazorPageApp.Pages
 {
-	public class PrivacyModel : PageModel
+	public class AboutModel : PageModel
 	{
-		private readonly ILogger<PrivacyModel> _logger;
 
-		public PrivacyModel(ILogger<PrivacyModel> logger)
-		{
-			_logger = logger;
-		}
 
 		public void OnGet()
 		{
