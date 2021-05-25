@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BigStar.ColorLib\BigStar.ColorLib.csproj" />
-  </ItemGroup>
-
 </Project>
