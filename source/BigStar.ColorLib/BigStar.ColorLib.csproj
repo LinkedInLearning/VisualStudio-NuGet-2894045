@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.7.0-experimental</Version>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
     <Company>Big Star Collectibles</Company>
     <PackageId>BigStarCollectibles.ColorLib</PackageId>
     <Authors>Walt Ritscher, Terry Dactill</Authors>
