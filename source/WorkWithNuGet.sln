@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore", "NetCore", "{90412956-D039-449F-A098-8F955BE11D7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientLibs", "ClientLibs", "{90412956-D039-449F-A098-8F955BE11D7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyConsole.Core", "TinyConsole.Core\TinyConsole.Core.csproj", "{EA96515B-78AB-41B1-87DE-25C3F906C95E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyRazorPages.Core", "TinyRazorPages.Core\TinyRazorPages.Core.csproj", "{98363013-2794-482D-87B7-6AD470894830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EA96515B-78AB-41B1-87DE-25C3F906C95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA96515B-78AB-41B1-87DE-25C3F906C95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA96515B-78AB-41B1-87DE-25C3F906C95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA96515B-78AB-41B1-87DE-25C3F906C95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98363013-2794-482D-87B7-6AD470894830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98363013-2794-482D-87B7-6AD470894830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98363013-2794-482D-87B7-6AD470894830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98363013-2794-482D-87B7-6AD470894830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
